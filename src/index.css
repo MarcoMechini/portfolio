@@ -1,3 +1,8 @@
+:root {
+  --body-background-color: #080808;
+  --nav-btn-color: #aaaaaa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +10,68 @@
 }
 
 img {
-  height: 400px;
-  width: 600px;
+  width: 100vw;
+}
+
+body {
+  background-color: var(--body-background-color);
+}
+
+nav {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+nav>button {
+  background-color: var(--body-background-colors);
+  color: var(--nav-btn-color);
+  opacity: 1;
+  filter: none;
+  box-shadow: 0 0 5px var(--nav-btn-color);
+  border: 1px solid var(--nav-btn-color);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav>button:hover {
+  color: #fff;
+  box-shadow: 0 0 5px #fff;
+  border: 1px solid #fff;
+}
+
+.main span {
+  color: #fff;
 }
 
 .section {
-  width: 600px;
+  /* display: none; */
+  width: 100vw;
   margin: 0 auto;
-
 }
 
 .slide {
   background-color: aliceblue;
+}
+
+.slide a {
+  cursor: grab;
+}
+
+@media screen and (min-width: 600px) {
+
+  img {
+    height: 400px;
+    width: 600px;
+  }
+
+  .section {
+    width: 600px;
+  }
 }

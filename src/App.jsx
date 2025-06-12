@@ -63,6 +63,13 @@ function App() {
 
   return (
     <>
+
+      <nav>
+        <button>Home</button>
+        <button>About Me</button>
+        <button>Contact</button>
+      </nav>
+
       <section className='section'>
         <Swiper
           effect={'cube'}
@@ -82,9 +89,9 @@ function App() {
               <SwiperSlide className='slide' key={e.id}> {/* Aggiungi key per ottimizzazione React */}
                 <div>{e.name}</div>
                 <a href={e.html_url} target="_blank" rel="noopener noreferrer"> {/* Aggiunto target e rel per sicurezza */}
-                  {e.html_url}
+
+                  <img src={e.imageUrl} alt={`Immagine di ${e.name}`} /> {/* Usa imageUrl corretto */}
                 </a>
-                <img src={e.imageUrl} alt={`Immagine di ${e.name}`} /> {/* Usa imageUrl corretto */}
               </SwiperSlide>
             ))
           ) : (
